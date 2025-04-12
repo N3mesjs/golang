@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"n3mesjs/greetings"
 )
 
 func main() {
