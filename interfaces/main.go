@@ -47,4 +47,23 @@ func (c Circle) area() float64 {
 
 func printArea(s Shape) {
 	fmt.Printf("Area: %f\n", s.area())
+
+	// Type assertion to check if s is a Rectangle, If it is, the ok is boolean value with true
+	rec, ok := s.(Rectangle)
+	if ok {
+		fmt.Println("It's a rectangle with length:", rec.Length, "and width:", rec.Width)
+	} else {
+		fmt.Println("It's not a rectangle")
+	}
+
+	// or we can do it with a type switch statement, only in a switch stamentent we can use: interface.(type) so we can check the type of the interface
+
+	switch v := s.(type) {
+	case Rectangle:
+		fmt.Println("It's a rectangle with length:", v.Length, "and width:", v.Width)
+	case Circle:
+		fmt.Println("It's a circle with radius:", v.Radius)
+	default:
+		fmt.Println("Unknown shape")
+	}
 }
