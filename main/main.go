@@ -8,6 +8,7 @@ func main() {
     //fmt.Println("Hello, World!")
 
 	var i int32 = -32
+	i *= 2
 
 	greetings := "Hello, World!"
 	fmt.Println("cc", greetings, i)
