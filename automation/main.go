@@ -8,6 +8,14 @@ import (
 )
 
 func main() {
+	for {
+		x, y := robotgo.Location()
+		fmt.Println("x: ", x, " y: ", y)
+	}
+}
+
+
+func purn() {
 	robotgo.Move(100, 100)
 	fmt.Println(robotgo.Location())
 	robotgo.Move(100, 200) // multi screen supported
@@ -25,7 +33,7 @@ func main() {
 	img := robotgo.ToImage(bit)
 	imgo.Save("test.png", img)
 
-	exec.Command("cmd", "/C", "start", "https://www.google.com").Run()
+	exec.Command("cmd", "/C", "start", "https://").Run()
 	robotgo.Sleep(1)
 	robotgo.TypeStr("pornhub")
 	robotgo.KeyTap("enter")
@@ -33,12 +41,4 @@ func main() {
 	robotgo.Sleep(1)
 	robotgo.Click("left")
 	robotgo.Click("left")
-
-	// for i := 0; ; i++ {
-	// 	x, y := robotgo.Location()
-	// 	fmt.Println("get mouse pos: ", x, y)
-	// 	if x == 607 && y == 407{
-	// 		break
-	// 	}
-	//   }
 }
