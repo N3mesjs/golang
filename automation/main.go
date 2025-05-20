@@ -8,10 +8,11 @@ import (
 )
 
 func main() {
-	for {
-		x, y := robotgo.Location()
-		fmt.Println("x: ", x, " y: ", y)
-	}
+	//for {
+	//	x, y := robotgo.Location()
+	//	fmt.Println("x: ", x, " y: ", y)
+	//}
+	purn()
 }
 
 
